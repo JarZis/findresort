@@ -1,0 +1,771 @@
+
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Ezze Tech">
+
+    <!--CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/icofont/icofont.min.css">
+    <link rel="stylesheet" href="assets/css/leaflet.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+
+
+    <title>Home</title>
+
+</head>
+
+<body>
+
+<!-- WRAPPER
+    =================================================================================================================-->
+<div class="ts-page-wrapper ts-has-bokeh-bg" id="page-top">
+
+    <!--*********************************************************************************************************-->
+    <!--HEADER **************************************************************************************************-->
+    <!--*********************************************************************************************************-->
+    <header id="ts-header" class="fixed-top">
+
+        <!-- SECONDARY NAVIGATION
+        =============================================================================================================-->
+        <nav id="ts-secondary-navigation" class="navbar p-0">
+            <div class="container justify-content-end justify-content-sm-between">
+
+                <!--Left Side-->
+                <div class="navbar-nav d-none d-sm-block">
+                    <!--Phone-->
+                    <span class="mr-4">
+                            <i class="fa fa-phone-square mr-1"></i>
+                            +1 123 456 789
+                        </span>
+                    <!--Email-->
+                    <a href="#">
+                        <i class="fa fa-envelope mr-1"></i>
+                        admin@findresort.com
+                    </a>
+                </div>
+
+                <!--Right Side-->
+                <div class="navbar-nav flex-row">
+
+                    <!--Search Input-->
+                    <input type="text" class="form-control p-2 border-left bg-transparent w-auto" placeholder="Search">
+
+                    <!--Language Select-->
+                    <select class="custom-select bg-transparent ts-text-small border-left border-right" id="language" name="language">
+                        <option value="1">EN</option>
+                        <option value="2">FR</option>
+                        <option value="3">DE</option>
+                    </select>
+
+                </div>
+                <!--end navbar-nav-->
+            </div>
+            <!--end container-->
+        </nav>
+
+        <!--PRIMARY NAVIGATION
+        =============================================================================================================-->
+        <nav id="ts-primary-navigation" class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+
+                <!--Brand Logo-->
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo.png" alt="">
+                </a>
+
+                <!--Responsive Collapse Button-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPrimary" aria-controls="navbarPrimary" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Collapsing Navigation-->
+                <div class="collapse navbar-collapse" id="navbarPrimary">
+
+                    <!--LEFT NAVIGATION MAIN LEVEL
+                    =================================================================================================-->
+                    <ul class="navbar-nav">
+
+
+
+                        <!--ABOUT US (Main level)
+                        =============================================================================================-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html">About Us</a>
+                        </li>
+                        <!--end ABOUT US nav-item-->
+
+                        <!--CONTACT (Main level)
+                        =============================================================================================-->
+                        <li class="nav-item">
+                            <a class="nav-link mr-2" href="contact.html">Contact</a>
+                        </li>
+                        <!--end CONTACT nav-item-->
+
+                    </ul>
+                    <!--end Left navigation main level-->
+
+                    <!--RIGHT NAVIGATION MAIN LEVEL
+                    =================================================================================================-->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!--LOGIN (Main level)
+                        =============================================================================================-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+
+                        <!--REGISTER (Main level)
+                        =============================================================================================-->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="register.html">Register</a>
+                        </li>
+
+
+
+                    </ul>
+                    <!--end Right navigation-->
+
+                </div>
+                <!--end navbar-collapse-->
+            </div>
+            <!--end container-->
+        </nav>
+        <!--end #ts-primary-navigation.navbar-->
+
+    </header>
+    <!--end Header-->
+
+    <!--*********************************************************************************************************-->
+    <!-- MAIN ***************************************************************************************************-->
+    <!--*********************************************************************************************************-->
+
+    <main id="ts-main">
+
+
+
+        <!--ITEMS AND SIDEBAR
+            =========================================================================================================-->
+        <section id="items-grid-and-sidebar">
+            <div class="container">
+                <div class="row flex-wrap-reverse">
+
+                    <!--LEFT SIDE (ITEMS)
+                        =============================================================================================-->
+                    <div class="col-md-4 navbar-expand-md">
+
+                        <button class="btn bg-white mb-4 w-100 d-block d-md-none" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="float-left">
+                                    <i class="fa fa-search mr-2"></i>
+                                    Search
+                                </span>
+                            <span class="float-right">
+                                    <i class="fa fa-plus small ts-opacity__30"></i>
+                                </span>
+                        </button>
+
+                        <aside id="sidebar" class="ts-sidebar collapse navbar-collapse">
+
+                            <!--SEARCH FORM
+                                =========================================================================================-->
+                            <section id="sidebar-search-form">
+
+                                <h3>Search Form</h3>
+
+                                <form id="form-search" class="ts-form">
+
+                                    <!--Keyword-->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="keyword" name="keyword" placeholder="District">
+                                    </div>
+
+                                    <!--Price-->
+                                    <div class="row">
+
+                                        <!--Min Price-->
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control border-right-0" id="min-price" name="min_price" placeholder="Min Price">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text bg-white border-left-0"><i class="icofont-taka"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--Max Price-->
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control border-right-0" id="max-price" name="max_price" placeholder="Max Price">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text bg-white border-left-0"><i class="icofont-taka"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!--Status-->
+                                    <div class="form-group">
+                                        <select class="custom-select" id="capacity" name="capacity">
+                                            <option value="">Capacity</option>
+                                            <option value="1">2</option>
+                                            <option value="2">3</option>
+                                            <option value="2">5</option>
+                                            <option value="2">8</option>
+                                        </select>
+                                    </div>
+
+                                    <!--Row - Min price & Max price-->
+
+
+                                    <!--Submit button-->
+                                    <div class="form-group my-2">
+                                        <button type="submit" class="btn btn-primary w-100" id="search-btn">Search
+                                        </button>
+                                    </div>
+
+                                </form>
+                                <!--end #form-search-->
+                            </section>
+                            <!--end #sidebar-search-form-->
+
+                            <section id="map-results">
+                                <h3>See Map</h3>
+
+                                <div id="ts-map-simple" class="ts-sidebar-map"
+                                     data-ts-map-leaflet-provider="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png"
+                                     data-ts-map-zoom="12"
+                                     data-ts-map-center-latitude="40.702411"
+                                     data-ts-map-center-longitude="-73.556842"
+                                     data-ts-map-scroll-wheel="1"
+                                     data-ts-map-controls="0">
+                                </div>
+
+                            </section>
+
+                        </aside>
+                        <!--end #sidebar-->
+                    </div>
+                    <!--end Left Side / col-md-8-->
+
+                    <!--RIGHT SIDE (SIDEBAR)
+                        =============================================================================================-->
+
+                    <div class="col-md-8">
+
+                        <!--DISPLAY CONTROL
+                            =========================================================================================-->
+                        <section id="display-control" class="clearfix">
+
+                            <!--Display selector on the right-->
+                            <div class="float-none float-sm-right pl-2 ts-center__vertical">
+                                <label for="sorting" class="mb-0 mr-2 text-nowrap">Sort by:</label>
+                                <select class="custom-select bg-transparent" id="sorting" name="sorting">
+                                    <option value="">Default</option>
+                                    <option value="1">Price lowest first</option>
+                                    <option value="2">Price highest first</option>
+                                    <option value="3">Distance</option>
+                                </select>
+                            </div>
+
+                        </section>
+
+                        <!--ITEMS LIST
+                            =========================================================================================-->
+                        <section id="ts-items-list">
+
+                            <!--Item-->
+                            <a href="detail-01.html" class="card ts-item ts-item__list ts-card">
+                                <!--Card Image-->
+                                <div class="card-img" data-bg-image="assets/img/img-item-thumb-01.jpg"></div>
+
+                                <!--Card Body-->
+                                <div class="card-body">
+
+                                    <figure class="ts-item__info">
+                                        <h4>Big Luxury Resort</h4>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star"></i>
+                                        <aside>
+                                            <i class="fa fa-map-marker mr-2"></i>
+                                            Dhaka, Bangladesh
+                                        </aside>
+                                    </figure>
+
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Excellent Location</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Breakfast</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Pay at the hotel</dt>
+                                        </dl>
+                                    </div>
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Nightly pricing starting at </dt>
+                                            <dd><span class="badge badge-success">2,000 <i class="icofont-taka"></i></span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <!--Card Footer-->
+                                <div class="card-footer">
+                                    <span class="ts-btn-arrow">Detail</span>
+                                    <span class="float-right"><span class="text-success">8.0</span> Very good - “Good place to stay."</span>
+                                </div>
+
+                            </a>
+                            <!--Item-->
+                            <a href="detail-01.html" class="card ts-item ts-item__list ts-card">
+                                <!--Card Image-->
+                                <div class="card-img" data-bg-image="assets/img/img-item-thumb-02.jpg"></div>
+
+                                <!--Card Body-->
+                                <div class="card-body">
+
+                                    <figure class="ts-item__info">
+                                        <h4>Big Luxury Resort</h4>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <aside>
+                                            <i class="fa fa-map-marker mr-2"></i>
+                                            Dhaka, Bangladesh
+                                        </aside>
+                                    </figure>
+
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Excellent Location</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Breakfast</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Pay at the hotel</dt>
+                                        </dl>
+                                    </div>
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Nightly pricing starting at </dt>
+                                            <dd><span class="badge badge-success">2,000 <i class="icofont-taka"></i></span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <!--Card Footer-->
+                                <div class="card-footer">
+                                    <span class="ts-btn-arrow">Detail</span>
+                                    <span class="float-right"><span class="text-success">8.0</span> Very good - “Good place to stay."</span>
+                                </div>
+
+                            </a>
+                            <!--Item-->
+                            <a href="detail-01.html" class="card ts-item ts-item__list ts-card">
+                                <!--Card Image-->
+                                <div class="card-img" data-bg-image="assets/img/img-item-thumb-03.jpg"></div>
+
+                                <!--Card Body-->
+                                <div class="card-body">
+
+                                    <figure class="ts-item__info">
+                                        <h4>Big Luxury Resort</h4>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star"></i>
+                                        <aside>
+                                            <i class="fa fa-map-marker mr-2"></i>
+                                            Dhanmondi, Bangladesh
+                                        </aside>
+                                    </figure>
+
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Excellent Location</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Breakfast</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Pay at the hotel</dt>
+                                        </dl>
+                                    </div>
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Nightly pricing starting at </dt>
+                                            <dd><span class="badge badge-success"><span class="badge badge-success"></span>2,000 <i class="icofont-taka"></i></span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <!--Card Footer-->
+                                <div class="card-footer">
+                                    <span class="ts-btn-arrow">Detail</span>
+                                    <span class="float-right"><span class="text-success">8.0</span> Very good - “Good place to stay."</span>
+                                </div>
+
+                            </a>
+                            <!--Item-->
+                            <a href="detail-01.html" class="card ts-item ts-item__list ts-card">
+                                <!--Card Image-->
+                                <div class="card-img" data-bg-image="assets/img/img-item-thumb-04.jpg"></div>
+
+                                <!--Card Body-->
+                                <div class="card-body">
+
+                                    <figure class="ts-item__info">
+                                        <h4>Big Luxury Resort</h4>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star"></i>
+                                        <aside>
+                                            <i class="fa fa-map-marker mr-2"></i>
+                                            Kawran Bazar, Bangladesh
+                                        </aside>
+                                    </figure>
+
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Excellent Location</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Breakfast</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Pay at the hotel</dt>
+                                        </dl>
+                                    </div>
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Nightly pricing starting at </dt>
+                                            <dd><span class="badge badge-success">2,000 <i class="icofont-taka"></i></span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <!--Card Footer-->
+                                <div class="card-footer">
+                                    <span class="ts-btn-arrow">Detail</span>
+                                    <span class="float-right"><span class="text-success">8.0</span> Very good - “Good place to stay."</span>
+                                </div>
+
+                            </a>
+                            <!--Item-->
+                            <a href="detail-01.html" class="card ts-item ts-item__list ts-card">
+                                <!--Card Image-->
+                                <div class="card-img" data-bg-image="assets/img/img-item-thumb-05.jpg"></div>
+
+                                <!--Card Body-->
+                                <div class="card-body">
+
+                                    <figure class="ts-item__info">
+                                        <h4>Big Luxury Resort</h4>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star"></i>
+                                        <aside>
+                                            <i class="fa fa-map-marker mr-2"></i>
+                                            Mirpur, Bangladesh
+                                        </aside>
+                                    </figure>
+
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Excellent Location</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Breakfast</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Pay at the hotel</dt>
+                                        </dl>
+                                    </div>
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Nightly pricing starting at </dt>
+                                            <dd><span class="badge badge-success">1,000 <i class="icofont-taka"></i></span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <!--Card Footer-->
+                                <div class="card-footer">
+                                    <span class="ts-btn-arrow">Detail</span>
+                                    <span class="float-right"><span class="text-success">8.0</span> Very good - “Good place to stay."</span>
+                                </div>
+
+                            </a>
+                            <!--Item-->
+                            <a href="detail-01.html" class="card ts-item ts-item__list ts-card">
+                                <!--Card Image-->
+                                <div class="card-img" data-bg-image="assets/img/img-item-thumb-06.jpg"></div>
+
+                                <!--Card Body-->
+                                <div class="card-body">
+
+                                    <figure class="ts-item__info">
+                                        <h4>Big Luxury Resort</h4>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star"></i>
+                                        <aside>
+                                            <i class="fa fa-map-marker mr-2"></i>
+                                            Gulshan, Bangladesh
+                                        </aside>
+                                    </figure>
+
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Excellent Location</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Breakfast</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Pay at the hotel</dt>
+                                        </dl>
+                                    </div>
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Nightly pricing starting at </dt>
+                                            <dd><span class="badge badge-success">5,000 <i class="icofont-taka"></i></span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <!--Card Footer-->
+                                <div class="card-footer">
+                                    <span class="ts-btn-arrow">Detail</span>
+                                    <span class="float-right"><span class="text-success">8.0</span> Very good - “Good place to stay."</span>
+                                </div>
+
+                            </a>
+                            <!--Item-->
+                            <a href="detail-01.html" class="card ts-item ts-item__list ts-card">
+                                <!--Card Image-->
+                                <div class="card-img" data-bg-image="assets/img/img-item-thumb-07.jpg"></div>
+
+                                <!--Card Body-->
+                                <div class="card-body">
+
+                                    <figure class="ts-item__info">
+                                        <h4>Big Luxury Resort</h4>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star"></i>
+                                        <aside>
+                                            <i class="fa fa-map-marker mr-2"></i>
+                                            Banani, Bangladesh
+                                        </aside>
+                                    </figure>
+
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Excellent Location</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Breakfast</dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>Pay at the hotel</dt>
+                                        </dl>
+                                    </div>
+                                    <div class="ts-description-lists">
+                                        <dl>
+                                            <dt>Nightly pricing starting at </dt>
+                                            <dd><span class="badge badge-success">3,000 <i class="icofont-taka"></i></span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <!--Card Footer-->
+                                <div class="card-footer">
+                                    <span class="ts-btn-arrow">Detail</span>
+                                    <span class="float-right"><span class="text-success">8.0</span> Very good - “Good place to stay."</span>
+                                </div>
+
+                            </a>
+
+
+                        </section>
+
+                        <!--end row-->
+
+                        <!--PAGINATION
+                            =========================================================================================-->
+                        <section id="pagination">
+                            <div class="container">
+
+                                <!--Pagination-->
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination ts-center__horizontal">
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link ts-btn-arrow" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </section>
+
+                    </div>
+                    <!--end Right Side / col-md-4-->
+
+                </div>
+                <!--end row-->
+            </div>
+            <!--end container-->
+        </section>
+        <!--end #items-list-->
+
+    </main>
+    <!--end #ts-main-->
+
+    <!--*********************************************************************************************************-->
+    <!--************ FOOTER *************************************************************************************-->
+    <!--*********************************************************************************************************-->
+
+    <footer id="ts-footer">
+
+        <!--MAIN FOOTER CONTENT
+        =============================================================================================================-->
+        <section id="ts-footer-main">
+            <div class="container">
+                <div class="row">
+
+                    <!--Brand and description-->
+                    <div class="col-md-6">
+                        <a href="#" class="brand">
+                            <img src="assets/img/logo.png" alt="">
+                        </a>
+                        <p class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat tempor sapien.
+                            In lobortis posuere tincidunt. Curabitur malesuada tempus ligula nec maximus. Nam tortor
+                            arcu,
+                            tincidunt quis molestie non, sagittis dignissim ligula. Fusce est ipsum, pharetra in felis
+                            ac,
+                            lobortis volutpat diam.
+                        </p>
+                        <a href="#" class="btn btn-outline-dark mb-4">Contact Us</a>
+                    </div>
+
+                    <!--Navigation-->
+                    <div class="col-md-2">
+                        <h4>Navigation</h4>
+                        <nav class="nav flex-row flex-md-column mb-4">
+                            <a href="#" class="nav-link">Home</a>
+                            <a href="#" class="nav-link">Resort</a>
+                            <a href="#" class="nav-link">About Us</a>
+                            <a href="#" class="nav-link">Sign In</a>
+                            <a href="#" class="nav-link">Register</a>
+                        </nav>
+                    </div>
+
+                    <!--Contact Info-->
+                    <div class="col-md-4">
+                        <h4>Contact</h4>
+                        <address class="ts-text-color-light">
+                            Software Technology Park
+                            <br>
+                            Dhaka, Bangladesh
+                            <br>
+                            <strong>Email: </strong>
+                            <a href="#" class="btn-link">admin@findresort.com</a>
+                            <br>
+                            <strong>Phone:</strong>
+                            +94847438383
+                            <br>
+                            <strong>Skype: </strong>
+                            ezzetech
+                        </address>
+                    </div>
+
+                </div>
+                <!--end row-->
+            </div>
+            <!--end container-->
+        </section>
+        <!--end ts-footer-main-->
+
+        <!--SECONDARY FOOTER CONTENT
+        =============================================================================================================-->
+        <section id="ts-footer-secondary">
+            <div class="container">
+
+                <!--Copyright-->
+                <div class="ts-copyright">(C) 2019 Ezze Technology Limited, All rights reserved</div>
+
+                <!--Social Icons-->
+                <div class="ts-footer-nav">
+                    <nav class="nav">
+                        <a href="#" class="nav-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="nav-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="nav-link">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a href="#" class="nav-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </nav>
+                </div>
+                <!--end ts-footer-nav-->
+
+            </div>
+            <!--end container-->
+        </section>
+        <!--end ts-footer-secondary-->
+
+    </footer>
+    <!--end #ts-footer-->
+
+</div>
+<!--end page-->
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://maps.google.com/maps/api/js"></script>
+<script src="assets/js/leaflet.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/map-leaflet.js"></script>
+
+</body>
+</html>
+
